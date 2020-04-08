@@ -10,10 +10,10 @@ import java.util.Date;
 
 @ConfigurationProperties(prefix = "config.jwt")
 @Component
-public class JwtConfig {
-    private String secret = "abcdefg1234567";
-    private long expire= 3600;
-    private String header= "token";
+public    class JwtConfig {
+        private String secret = "abcdefg1234567";
+        private long expire= 3600;
+        private String header= "token";
 
     public String createToken (String subject){
         Date nowDate = new Date();

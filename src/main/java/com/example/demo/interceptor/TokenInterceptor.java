@@ -26,6 +26,12 @@ public class TokenInterceptor  extends HandlerInterceptorAdapter {
         if (uri.contains("/login")) {
             return true;
         }
+        if (uri.contains("/addUser")) {
+            return true;
+        }
+        if (uri.contains("/regUser")) {
+            return true;
+        }
         /** Token 验证 */
         String token = request.getHeader(jwtConfig.getHeader());
         if(StringUtils.isEmpty(token)){
